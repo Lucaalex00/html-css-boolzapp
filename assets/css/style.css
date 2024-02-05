@@ -1,3 +1,112 @@
-body {
-    background-color: red;
+/************************************
+
+              Utilities
+
+************************************/
+
+:root {
+    --background-top-color: rgba(0, 150, 136, 1);
+    --background-bottom-color: rgba(218, 219, 211, 1);
+    --notify-menu-color: rgba(142, 218, 252, 1);
+    --icons-font-color: rgba(177, 177, 177, 1);
+    --secondary-font-color: rgba(206, 220, 239, 1);
+    --header-footer-menu-color: rgba(243, 238, 234, 1);
+    --lighter-color: white;
+    --light-color: gray;
+    --dark-color: black;
+
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cols*/
+.col-1 {
+    width: calc((100% / 12)* 1);
+}
+
+.col-2 {
+    width: calc((100% / 12)* 2);
+}
+
+.col-4 {
+    width: calc((100% / 12)*4);
+}
+
+.col-6 {
+    width: 50%
+}
+
+.col-8 {
+    width: calc((100% / 12)*8);
+}
+
+.col-12 {
+    width: 100%
+}
+
+/*Rules*/
+.m-auto {
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap2 {
+    gap: 2rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+section {
+    margin: 100px 0;
+}
+
+.p1 {
+    padding: 1rem;
+}
+
+.p2 {
+    padding: 2rem;
+}
+
+.debug {
+    border: 2px dashed black;
+    background-color: paleturquoise;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+/*#region BACKGROUND*/
+.background-top {
+    width: 100vw;
+    height: 20vh;
+    background-color: var(--background-top-color);
+    top: 0;
+    z-index: -1;
+
+}
+
+.background-bottom {
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--background-bottom-color);
+    bottom: 0;
+    z-index: -1;
+}
+
+/*#endregion BACKGROUND*/
