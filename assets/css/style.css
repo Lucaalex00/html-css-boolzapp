@@ -302,3 +302,62 @@ body {
         color: var(--light-color);
     }
 }
+
+/************************************
+
+              MediaQuery
+
+************************************/
+
+@media screen and (max-width:991px) {
+    .col-m-1 {
+        width: calc((100% / 12)* 1);
+    }
+
+    .col-m-2 {
+        width: calc((100% / 12)* 2);
+    }
+
+    .col-m-4 {
+        width: calc((100% / 12)*4);
+    }
+
+    .col-m-6 {
+        width: 50%
+    }
+
+    .col-m-8 {
+        width: calc((100% / 12)*8);
+    }
+
+    .col-m-12 {
+        width: 100%
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .col-sm-1 {
+        width: calc((100% / 12)* 1);
+    }
+
+    .col-sm-2 {
+        width: calc((100% / 12)* 2);
+    }
+
+    .col-sm-4 {
+        width: calc((100% / 12)*4);
+    }
+
+    .col-sm-6 {
+        width: 50%
+    }
+
+    .col-sm-8 {
+        width: calc((100% / 12)*8);
+    }
+
+    .col-sm-12 {
+        width: 100%
+    }
+}
