@@ -10,7 +10,7 @@
     --notify-menu-color: rgba(142, 218, 252, 1);
     --icons-font-color: rgba(177, 177, 177, 1);
     --secondary-font-color: rgba(206, 220, 239, 1);
-    --header-footer-menu-color: rgba(243, 238, 234, 1);
+    --header-footer-menu-color: rgba(209, 209, 209, 1);
     --lighter-color: white;
     --light-color: gray;
     --dark-color: black;
@@ -82,12 +82,13 @@ section {
 }
 
 .debug {
-    border: 2px dashed black;
+    border: 1px dashed black;
 }
 
 body {
     width: 100%;
     height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 /*#region BACKGROUND*/
@@ -132,6 +133,7 @@ body {
 .main-content {
     z-index: 1;
     height: 100%;
+    width: 100%;
     justify-content: space-between;
 
 }
@@ -140,8 +142,66 @@ body {
 #left-container {
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
 }
+
+.left-header {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-footer-menu-color);
+}
+
+.left-notify-menu {
+    align-items: center;
+    font-size: 0.8rem;
+    background-color: var(--notify-menu-color);
+
+    & a {
+        color: var(--dark-color);
+    }
+}
+
+.left-search-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3rem;
+
+}
+
+.left-search-bar {
+    background-color: var(--lighter-color);
+    font-size: 0.8rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.2rem 2rem;
+}
+
+.contact-menu-container {
+    flex-direction: column;
+    /*overflow-y: scroll;*/
+}
+
+.contact {
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: var(--lighter-color);
+}
+
+.contact-left {
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-img img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.contact-info>p,
+.contact-timetable {
+    color: var(--icons-font-color);
+    font-size: 0.8rem;
+}
+
 
 
 
