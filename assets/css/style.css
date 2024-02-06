@@ -84,11 +84,17 @@ section {
     padding: 2rem;
 }
 
-/* .debug */
-    {
-    /*DEBUG*/
-    border: 1px dashed black;
+.hidden {
+    display: none;
 }
+
+/* DEBUG */
+
+/* 
+.debug{
+    border: 1px dashed black;
+} 
+*/
 
 body {
     width: 100%;
@@ -149,14 +155,14 @@ body {
 }
 
 .main-container {
-    z-index: 1;
-    height: 95%;
+    /* z-index: 1; */
+    height: 95vh;
     display: flex;
     max-width: 1440px;
 }
 
 .main-content {
-    z-index: 1;
+    /* z-index: 1; */
     height: 100%;
     width: 100%;
     justify-content: space-between;
@@ -190,13 +196,21 @@ body {
     font-size: 0.8rem;
     background-color: var(--notify-menu-color);
 
-    & a {
+    & i {
+        background-color: var(--lighter-color);
+        margin-left: 10px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        color: var(--notify-menu-color);
+    }
+
+    a {
         color: var(--dark-color);
     }
 }
 
 .left-search-container {
-    padding: 0.3rem;
+    padding: 0.5rem;
     background-color: var(--search-bar-color);
 
 }
@@ -210,22 +224,19 @@ body {
 }
 
 .left-contacts-menu {
-    height: calc(100% - 145px)
+    height: 90%;
+    overflow-y: scroll;
 }
 
 .contact-menu-container {
     flex-direction: column;
-    justify-content: space-evenly;
-    overflow-y: scroll;
-    max-height: 100%;
-
 }
 
 .contact {
     justify-content: space-between;
     padding: 0.5rem;
     background-color: var(--lighter-color);
-    border: 1px solid var(--secondary-font-color);
+    border: 1px dotted var(--secondary-font-color);
 }
 
 .contact-left {
@@ -241,12 +252,16 @@ body {
 
 /*RIGHT*/
 
+#right-container {
+    height: 100%;
+}
+
 .right-header {
     background-color: var(--header-menu-color);
     justify-content: space-between;
     align-items: center;
     height: 10%;
-    padding: 0.5rem;
+    padding: 0 1rem;
 
 }
 
@@ -259,14 +274,21 @@ body {
     gap: 1rem;
 }
 
+.right-header-info {
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: center;
+}
+
 /*MAIN*/
 
 #main-chat {
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 50px - 50px);
-    font-size: 0.9rem;
+    height: calc(100% - 10% - 50px);
+    font-size: 0.8rem;
     flex-direction: column;
     gap: 1rem;
+    overflow-y: auto;
 
 
 }
@@ -287,6 +309,10 @@ body {
     width: 60%;
     max-height: 50%;
     padding: 0.6rem;
+
+    & p span {
+        display: none;
+    }
 }
 
 .bubble-timetable {
@@ -303,7 +329,7 @@ body {
     background-color: var(--footer-menu-color);
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0 1rem;
 
 }
 
@@ -327,6 +353,79 @@ body {
         color: var(--light-color);
     }
 }
+
+/************************************
+
+            Animations
+
+************************************/
+
+.left-header a:hover,
+.right-header a:hover,
+.left-notify-menu a:hover {
+    background-color: rgba(156, 156, 156, 0.479);
+}
+
+body:has(.fa-magnifying-glass:active) .search-text {
+    display: block;
+}
+
+.footer-left a {
+    transition: 500ms;
+}
+
+.footer-left a:hover {
+    font-size: 1.2rem;
+    color: yellowgreen;
+
+}
+
+.footer-right a {
+    transition: 500ms;
+}
+
+.footer-right a:hover {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.colourless-bubble a:hover+.bubble-opt,
+.colored-bubble a:hover+.bubble-opt {
+    display: block;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.3rem;
+
+
+    .opt-1 span {
+        color: yellow;
+    }
+
+    .opt-2 span {
+        color: red;
+    }
+
+    .opt-3 span {
+        color: green;
+    }
+
+    .opt-1,
+    .opt-2,
+    .opt-3 {
+        font-weight: bold;
+    }
+}
+
+.contact {
+    transition: 500ms;
+}
+
+.contact:hover {
+    background-color: rgba(170, 168, 168, 0.473);
+}
+
 
 /************************************
 
@@ -371,9 +470,12 @@ body {
         height: 100%;
     }
 
+    .contacts-menu-container {
+        max-height: 100%;
+    }
+
     .left-contacts-menu {
         background-color: var(--header-menu-color);
-        height: 100%;
     }
 
     .profile-img img,
