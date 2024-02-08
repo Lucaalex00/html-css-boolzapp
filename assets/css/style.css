@@ -401,8 +401,11 @@ body:has(.fa-magnifying-glass:active) .search-text {
     font-size: 0.6rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 0.3rem;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.445);
+    border-radius: 20%;
 
 
     .opt-1 span {
